@@ -10,33 +10,13 @@
     tools:context="com.example.pageservice.MainActivity" >
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText1"
-        android:layout_alignBottom="@+id/editText1"
-        android:layout_alignLeft="@+id/imageView1"
-        android:text="Cedula"
-        android:textColor="#000000" />
-
-    <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView2"
         android:layout_centerVertical="true"
-        android:text="Pasword"
+        android:text="Password"
         android:textColor="#000000" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_alignRight="@+id/editText1"
-        android:ems="10"
-        android:inputType="textPassword" />
 
     <ImageView
         android:id="@+id/imageView1"
@@ -48,24 +28,12 @@
         android:layout_toLeftOf="@+id/textView1"
         android:src="@drawable/service" />
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText2"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_marginBottom="14dp"
-        android:ems="10" >
-
-        <requestFocus />
-    </EditText>
-
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btnIniciarSesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView3"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/txtPasswordLogin"
         android:layout_marginTop="54dp"
         android:onClick="principal"
         android:text="Iniciar Sesion" />
@@ -77,19 +45,48 @@
         android:layout_alignBottom="@+id/imageView1"
         android:layout_alignParentRight="true"
         android:layout_marginRight="73dp"
-        android:text="PageService"
+        android:text="PagueService"
         android:textColor="#000000"
         android:textSize="25sp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnRegistrarse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
+        android:layout_alignBaseline="@+id/btnIniciarSesion"
+        android:layout_alignBottom="@+id/btnIniciarSesion"
         android:layout_marginLeft="29dp"
-        android:layout_toRightOf="@+id/button1"
+        android:layout_toRightOf="@+id/btnIniciarSesion"
         android:onClick="registro"
         android:text="Registrarse" />
+
+    <EditText
+        android:id="@+id/txtPasswordLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_toRightOf="@+id/textView3"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtCedulaLogin"
+        android:layout_alignLeft="@+id/imageView1"
+        android:text="Cedula"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/txtCedulaLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtPasswordLogin"
+        android:layout_alignRight="@+id/txtPasswordLogin"
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:inputType="number" />
 
 </RelativeLayout>

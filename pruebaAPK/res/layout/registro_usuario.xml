@@ -13,21 +13,11 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText1"
-        android:layout_alignBottom="@+id/editText1"
+        android:layout_alignBaseline="@+id/txtCedulaRegistro"
+        android:layout_alignBottom="@+id/txtCedulaRegistro"
         android:layout_alignLeft="@+id/imageView1"
         android:text="Cedula"
         android:textColor="#000000" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_alignRight="@+id/editText1"
-        android:ems="10"
-        android:inputType="textPassword" />
 
     <ImageView
         android:id="@+id/imageView1"
@@ -46,34 +36,36 @@
         android:layout_alignBottom="@+id/imageView1"
         android:layout_alignParentRight="true"
         android:layout_marginRight="73dp"
-        android:text="PageService"
+        android:text="PagueService"
         android:textColor="#000000"
         android:textSize="25sp" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/txtCedulaRegistro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/textView1"
         android:layout_marginTop="40dp"
-        android:ems="10" />
+        android:ems="10"
+        android:inputType="number" />
 
     <EditText
-        android:id="@+id/EditText01"
+        android:id="@+id/txtNombreRegistro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/TextView01"
         android:layout_alignBottom="@+id/TextView01"
         android:layout_alignParentRight="true"
-        android:ems="10" />
+        android:ems="10"
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/TextView01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/editText1"
+        android:layout_below="@+id/txtCedulaRegistro"
         android:layout_marginTop="32dp"
         android:text="Nombre"
         android:textColor="#000000" />
@@ -83,45 +75,60 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/TextView01"
-        android:layout_below="@+id/EditText01"
+        android:layout_below="@+id/txtNombreRegistro"
         android:layout_marginTop="96dp"
-        android:text="Pasword"
+        android:text="Password"
         android:textColor="#000000" />
 
     <TextView
         android:id="@+id/TextView02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/editText2"
+        android:layout_above="@+id/txtPasswordRegistro"
         android:layout_alignLeft="@+id/textView3"
         android:layout_marginBottom="22dp"
         android:text="Genero"
         android:textColor="#000000" />
 
-    <RadioButton
-        android:id="@+id/radioButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/EditText01"
-        android:layout_alignTop="@+id/TextView02"
-        android:text="Masculino" />
-
-    <RadioButton
-        android:id="@+id/RadioButton01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/radioButton1"
-        android:layout_alignBottom="@+id/radioButton1"
-        android:layout_alignRight="@+id/editText2"
-        android:text="Femenino" />
-
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btnSiguiente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/txtPasswordRegistro"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="42dp"
-        android:text="Aceptar" />
+        android:text="Siguiente" />
+
+    <EditText
+        android:id="@+id/txtPasswordRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignLeft="@+id/txtNombreRegistro"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtPasswordRegistro"
+        android:layout_alignRight="@+id/textView1" >
+
+        <RadioButton
+            android:id="@+id/btnFemenino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Femenino" />
+
+        <RadioButton
+            android:id="@+id/btnMasculino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Masculino" />
+
+    </RadioGroup>
 
 </RelativeLayout>

@@ -26,39 +26,39 @@
         android:layout_alignBottom="@+id/imageView1"
         android:layout_alignParentRight="true"
         android:layout_marginRight="73dp"
-        android:text="PageService"
+        android:text="PagueService"
         android:textColor="#000000"
         android:textSize="25sp" />
 
     <ImageButton
-        android:id="@+id/ImageButton02"
+        android:id="@+id/btnInternet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/ImageButton01"
-        android:layout_toRightOf="@+id/ImageButton01"
+        android:layout_alignTop="@+id/btnLuz"
+        android:layout_toRightOf="@+id/btnLuz"
         android:onClick="Recibos"
         android:src="@drawable/internet" />
 
     <ImageButton
-        android:id="@+id/ImageButton03"
+        android:id="@+id/btnGas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/ImageButton02"
-        android:layout_toRightOf="@+id/ImageButton02"
+        android:layout_alignTop="@+id/btnInternet"
+        android:layout_toRightOf="@+id/btnInternet"
         android:onClick="Recibos"
         android:src="@drawable/gas" />
 
     <ImageButton
-        android:id="@+id/ImageButton01"
+        android:id="@+id/btnLuz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imageButton1"
-        android:layout_toRightOf="@+id/imageButton1"
+        android:layout_alignTop="@+id/btnAgua"
+        android:layout_toRightOf="@+id/btnAgua"
         android:onClick="Recibos"
         android:src="@drawable/luz" />
 
     <ImageButton
-        android:id="@+id/imageButton1"
+        android:id="@+id/btnAgua"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -68,29 +68,29 @@
         android:src="@drawable/agua" />
 
     <ImageButton
-        android:id="@+id/ImageButton06"
+        android:id="@+id/btnPredial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ImageButton02"
-        android:layout_below="@+id/ImageButton02"
+        android:layout_alignLeft="@+id/btnInternet"
+        android:layout_below="@+id/btnInternet"
         android:onClick="Recibos"
         android:src="@drawable/predial" />
 
     <ImageButton
-        android:id="@+id/ImageButton08"
+        android:id="@+id/btnBanco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ImageButton04"
-        android:layout_toLeftOf="@+id/ImageButton05"
+        android:layout_below="@+id/btnTelefonia"
+        android:layout_toLeftOf="@+id/btnSOAT"
         android:onClick="Recibos"
         android:src="@drawable/banco" />
 
     <ImageButton
-        android:id="@+id/ImageButton09"
+        android:id="@+id/btnRecibo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ImageButton04"
-        android:layout_toRightOf="@+id/imageButton1"
+        android:layout_below="@+id/btnTelefonia"
+        android:layout_toRightOf="@+id/btnAgua"
         android:onClick="Recibos"
         android:src="@drawable/serviciosss" />
 
@@ -98,36 +98,36 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/ImageButton02"
-        android:layout_alignRight="@+id/ImageButton03"
+        android:layout_above="@+id/btnInternet"
+        android:layout_alignRight="@+id/btnGas"
         android:layout_marginBottom="33dp"
         android:text="Page sus servicios a un click de distancia con nuestro aplicativo movil, de forma rapida y segura"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ImageButton
-        android:id="@+id/ImageButton04"
+        android:id="@+id/btnTelefonia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageButton1"
-        android:layout_below="@+id/ImageButton01"
+        android:layout_alignLeft="@+id/btnAgua"
+        android:layout_below="@+id/btnLuz"
         android:onClick="Recibos"
         android:src="@drawable/telefono" />
 
     <ImageButton
-        android:id="@+id/ImageButton05"
+        android:id="@+id/btnSOAT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/ImageButton08"
-        android:layout_toRightOf="@+id/ImageButton04"
+        android:layout_above="@+id/btnBanco"
+        android:layout_toRightOf="@+id/btnTelefonia"
         android:onClick="Recibos"
         android:src="@drawable/soat" />
 
     <ImageButton
-        android:id="@+id/ImageButton07"
+        android:id="@+id/btnComercio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/ImageButton09"
-        android:layout_alignLeft="@+id/ImageButton03"
+        android:layout_above="@+id/btnRecibo"
+        android:layout_alignLeft="@+id/btnGas"
         android:onClick="Recibos"
         android:src="@drawable/comercio" />
 
