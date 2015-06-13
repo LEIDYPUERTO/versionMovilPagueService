@@ -23,6 +23,7 @@ import android.widget.Toast;
 public class MainActivity extends Activity {
 
 	@SuppressLint("NewApi") @Override
+	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
@@ -36,7 +37,8 @@ public class MainActivity extends Activity {
 
 
 
-			@TargetApi(Build.VERSION_CODES.GINGERBREAD) @SuppressLint("NewApi") public void onClick(View arg0) {
+			@TargetApi(Build.VERSION_CODES.GINGERBREAD) @SuppressLint("NewApi") 
+			public void onClick(View arg0) {
 
 				StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 				StrictMode.setThreadPolicy(policy); 
@@ -48,7 +50,9 @@ public class MainActivity extends Activity {
 						(txtCedula.getText().toString()));
 
 				if(cliente.getContrasena().equals(txtPassword.getText().toString())){
-					Toast.makeText(MainActivity.this, "hola "+ cliente.getNombre(), Toast.LENGTH_SHORT).show();
+					Toast.makeText(MainActivity.this, "Bienvenido "+ cliente.getNombre(), 
+							Toast.LENGTH_SHORT).show();
+					
 					startActivity(intent);
 				}
 			}

@@ -22,7 +22,8 @@ import com.example.pruebaapk.MainActivity;
 
 public class ClienteDao {
 
-	private static final String URL = "http://190.90.98.142:8080/proyectoSW2/services/ClienteDao?wsdl";
+	private static final String URL = "http://190.90.98.142:8080/" +
+			"proyectoSW2/services/ClienteDao?wsdl";
 	private static final String NAMESPACE = "http://dao";
 	
 

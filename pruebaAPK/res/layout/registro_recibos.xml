@@ -80,7 +80,7 @@
         android:text="N° Nit Comercio" />
 
     <EditText
-        android:id="@+id/txtNitComercio"
+        android:id="@+id/txtNIT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/txtNumeroCuenta"
@@ -93,7 +93,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/textView4"
-        android:layout_below="@+id/txtNPredio"
+        android:layout_below="@+id/txtPredial"
         android:layout_marginTop="27dp"
         android:text="Placa vehículo" />
 
@@ -102,17 +102,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView6"
-        android:layout_below="@+id/txtNitComercio"
+        android:layout_below="@+id/txtNIT"
         android:layout_marginTop="39dp"
         android:text="N° Predio" />
 
     <EditText
-        android:id="@+id/txtNPredio"
+        android:id="@+id/txtPredial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView5"
         android:layout_alignBottom="@+id/textView5"
-        android:layout_alignLeft="@+id/txtNitComercio"
+        android:layout_alignLeft="@+id/txtNIT"
         android:ems="10"
         android:inputType="number" />
 
@@ -120,9 +120,17 @@
         android:id="@+id/txtPlaca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtNPredio"
+        android:layout_alignLeft="@+id/txtPredial"
         android:layout_alignTop="@+id/textView6"
         android:ems="10"
-        android:hint="AAA-000" />
+        android:hint="AAA000" />
+
+    <Button
+        android:id="@+id/btnServiciosPublicos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/textView6"
+        android:text="Servicios Públicos" />
 
 </RelativeLayout>

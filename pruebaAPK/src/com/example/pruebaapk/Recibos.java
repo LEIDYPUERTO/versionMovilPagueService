@@ -12,7 +12,5 @@ public class Recibos extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.pagos2);
 	}
-
-
 }
 

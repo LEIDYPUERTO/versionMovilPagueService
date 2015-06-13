@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.pageservice.MainActivity" >
+    tools:context="com.example.pageservice.MainActivity" 
+    >
 
     <ImageView
         android:id="@+id/imageView1"
@@ -206,5 +207,5 @@
         android:layout_toRightOf="@+id/TextView06"
         android:src="@drawable/paagar" />
 
-    
+
 </RelativeLayout>

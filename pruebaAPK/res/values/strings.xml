@@ -4,5 +4,6 @@
     <string name="app_name">pruebaAPK</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="n_recibo_n_luz">N° Recibo \\n Luz</string>
 
 </resources>

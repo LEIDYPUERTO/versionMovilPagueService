@@ -1109,25 +1109,27 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f050064;
+        public static final int action_settings=0x7f05006b;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
         public static final int btnAgua=0x7f050047;
         public static final int btnBanco=0x7f050049;
         public static final int btnComercio=0x7f05004d;
-        public static final int btnFemenino=0x7f050062;
+        public static final int btnFemenino=0x7f050069;
+        public static final int btnFinalizarRegistro=0x7f050063;
         public static final int btnGas=0x7f050046;
         public static final int btnIniciarSesion=0x7f050040;
         public static final int btnInternet=0x7f050044;
         public static final int btnLuz=0x7f050045;
-        public static final int btnMasculino=0x7f050063;
+        public static final int btnMasculino=0x7f05006a;
         public static final int btnPagar=0x7f050054;
         public static final int btnPredial=0x7f050048;
         public static final int btnRecibo=0x7f05004c;
         public static final int btnRegistrarse=0x7f050042;
         public static final int btnSOAT=0x7f05004b;
-        public static final int btnSiguiente=0x7f050060;
+        public static final int btnServiciosPublicos=0x7f05005d;
+        public static final int btnSiguiente=0x7f050067;
         public static final int btnTelefonia=0x7f05004a;
         public static final int checkbox=0x7f05002d;
         public static final int collapseActionView=0x7f05000d;
@@ -1154,7 +1156,7 @@ containing a value of this type.
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
         public static final int radio=0x7f05002f;
-        public static final int radioGroup=0x7f050061;
+        public static final int radioGroup=0x7f050068;
         public static final int search_badge=0x7f050032;
         public static final int search_bar=0x7f050031;
         public static final int search_button=0x7f050033;
@@ -1181,15 +1183,20 @@ containing a value of this type.
         public static final int title=0x7f05002b;
         public static final int top_action_bar=0x7f050020;
         public static final int txtCedulaLogin=0x7f050043;
-        public static final int txtCedulaRegistro=0x7f05005d;
-        public static final int txtNPredio=0x7f05005a;
-        public static final int txtNitComercio=0x7f050058;
+        public static final int txtCedulaRegistro=0x7f050064;
+        public static final int txtNIT=0x7f050058;
+        public static final int txtNReciboGas=0x7f05005e;
         public static final int txtNombreBanco=0x7f050055;
-        public static final int txtNombreRegistro=0x7f05005e;
+        public static final int txtNombreRegistro=0x7f050065;
         public static final int txtNumeroCuenta=0x7f050056;
         public static final int txtPasswordLogin=0x7f050041;
-        public static final int txtPasswordRegistro=0x7f05005f;
+        public static final int txtPasswordRegistro=0x7f050066;
         public static final int txtPlaca=0x7f05005c;
+        public static final int txtPredial=0x7f05005a;
+        public static final int txtReciboAgua=0x7f05005f;
+        public static final int txtReciboInternet=0x7f050061;
+        public static final int txtReciboLuz=0x7f050062;
+        public static final int txtReciboTelefono=0x7f050060;
         public static final int up=0x7f050021;
         public static final int useLogo=0x7f050003;
         public static final int withText=0x7f05000c;
@@ -1248,8 +1255,9 @@ containing a value of this type.
         public static final int pagos2=0x7f030019;
         public static final int principal2=0x7f03001a;
         public static final int registro_recibos=0x7f03001b;
-        public static final int registro_usuario=0x7f03001c;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
+        public static final int registro_recibos_publicos=0x7f03001c;
+        public static final int registro_usuario=0x7f03001d;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001e;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;
@@ -1298,6 +1306,7 @@ containing a value of this type.
         public static final int action_settings=0x7f0a000f;
         public static final int app_name=0x7f0a000d;
         public static final int hello_world=0x7f0a000e;
+        public static final int n_recibo_n_luz=0x7f0a0010;
     }
     public static final class style {
         /** 

@@ -1,17 +1,45 @@
 package logica;
 
 import java.sql.Date;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.Random;
 
 public class FechaYValoresRecibos {
 
-//	public Date obtenerFecha(Date fechaReciboActual){
-//		Date fechaReciboProximo=null;
-//		fechaReciboActual.
-//		return fechaReciboProximo;
-//	}
-//	
-//	public double obtenerValorRecibo(){
-//		return 
-//	}
+	/**
+	 * Método que permite obtener una fecha mensualmente, dada una fecha inicial
+	 * @param fechaReciboActual
+	 * @return
+	 */
+	public Date obtenerFechaMes(Date fechaReciboActual){
+		Date fechaReciboProximo=null;
+				
+		Calendar cal = new GregorianCalendar();
+		        cal.setTimeInMillis(fechaReciboActual.getTime());
+        cal.add(Calendar.DAY_OF_MONTH, 30);
+        fechaReciboProximo = new java.sql.Date(cal.getTimeInMillis());
+		return fechaReciboProximo;
+	}
+	
+	/**
+	 * Método que permite obtener una fecha anualmente, dada una fecha inicial
+	 * @param fechaReciboActual
+	 * @return
+	 */
+	public Date obtenerFechaAnual(Date fechaReciboActual){
+		Date fechaReciboProximo=null;
+				
+		Calendar cal = new GregorianCalendar();
+		        cal.setTimeInMillis(fechaReciboActual.getTime());
+        cal.add(Calendar.DAY_OF_MONTH, 365);
+        fechaReciboProximo = new java.sql.Date(cal.getTimeInMillis());
+		return fechaReciboProximo;
+	}
+	
+	
+	public double obtenerValorRecibo(){
+		Random random = new Random();
+		return Math.rint(random.nextDouble() * 10000000 + 5000)/10;
+	}
 }
