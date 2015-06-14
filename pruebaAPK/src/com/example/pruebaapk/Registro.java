@@ -81,7 +81,8 @@ public class Registro extends Activity{
 				if(resultadoAlmacenar == true){
 					Toast.makeText(Registro.this, "Usuario agregado con éxito", 
 							Toast.LENGTH_LONG).show();
-					intent.putExtra("cedula", Integer.parseInt(txtCedula.getText().toString()));
+					intent.putExtra("cedula", Integer.parseInt
+							(txtCedula.getText().toString()));
 					startActivity(intent);
 				}else{
 					Toast.makeText(Registro.this, "El usuario no ha podido ser agregado", 

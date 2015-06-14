@@ -42,4 +42,16 @@ public class FechaYValoresRecibos {
 		Random random = new Random();
 		return Math.rint(random.nextDouble() * 10000000 + 5000)/10;
 	}
+	
+	
+	/**
+	 * Metodo que permite obtener el valor de un recibo de impuesto 
+	 * predial y comercio, dado el valor de valorizacion
+	 * @param valor
+	 * @return
+	 */
+	public double obtenerValorReciboPredialComercio(int valor){
+		Random random = new Random();
+		return Math.rint(random.nextDouble() * valor + 25000)/10;
+	}	
 }
