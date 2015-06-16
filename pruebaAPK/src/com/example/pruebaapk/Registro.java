@@ -1,7 +1,11 @@
 package com.example.pruebaapk;
 
+import dao.BancoDao;
 import dao.ClienteDao;
+import logica.Banco;
+import logica.BancoId;
 import logica.Cliente;
+import logica.FechaYValoresRecibos;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -33,10 +37,12 @@ public class Registro extends Activity{
 		final RadioButton btnMasculino = (RadioButton) findViewById(R.id.btnMasculino);
 		final RadioButton btnFemenino = (RadioButton) findViewById(R.id.btnFemenino);
 		final EditText txtPassword = (EditText) findViewById(R.id.txtPasswordRegistro);
+		final EditText txtNombreBanco = (EditText) findViewById(R.id.txtNombreBanco);
+		final EditText txtNumeroCuenta = (EditText) findViewById(R.id.txtNumeroCuenta);
 		
-		Button btnSiguiente = (Button) findViewById(R.id.btnSiguiente);
+		Button btnFinalizar = (Button) findViewById(R.id.btnFinalizar);
 		
-		btnSiguiente.setOnClickListener(new OnClickListener() {
+		btnFinalizar.setOnClickListener(new OnClickListener() {
 			
 			@TargetApi(Build.VERSION_CODES.GINGERBREAD)
 			@SuppressLint("NewApi")
@@ -50,7 +56,7 @@ public class Registro extends Activity{
 				
 				ClienteDao clienteDao = new ClienteDao();
 				String genero = "f";
-				Intent intent = new Intent(Registro.this, RegistroRecibos.class);
+				Intent intent = new Intent(Registro.this, Principal.class);
 //				
 				group.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 					
@@ -89,8 +95,25 @@ public class Registro extends Activity{
 							Toast.LENGTH_LONG).show();
 				}
 				
+				BancoDao bancoDao = new BancoDao();
+				
+				FechaYValoresRecibos valor = new FechaYValoresRecibos();
+				
+				boolean resultadoBanco = bancoDao.guardaBanco(new Banco(new BancoId
+						(Integer.parseInt(txtNumeroCuenta.getText().toString()),
+								Integer.parseInt(txtCedula.getText().toString())),
+								valor.obtenerValorRecibo(), 
+								txtNombreBanco.getText().toString()));
+				
+				if(resultadoBanco == false){
+					Toast.makeText(Registro.this, 
+							"Para pagar si cuenta bancaria, por favor " +
+							"ingrese a nuestra página web", 
+							Toast.LENGTH_LONG).show();
+				}
+				
 			}
 		});
 	}
-
+	
 }

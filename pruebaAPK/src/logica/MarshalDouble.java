@@ -10,6 +10,8 @@ import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlSerializer;
 
 public class MarshalDouble implements Marshal {
+	
+	
 	@Override
 	public Object readInstance(XmlPullParser parser, String namespace,
 			String name, PropertyInfo expected) throws IOException,

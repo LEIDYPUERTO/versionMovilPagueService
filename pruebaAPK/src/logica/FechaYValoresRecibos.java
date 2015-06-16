@@ -1,7 +1,7 @@
 package logica;
 
-import java.sql.Date;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Random;
 
@@ -41,6 +41,11 @@ public class FechaYValoresRecibos {
 	public double obtenerValorRecibo(){
 		Random random = new Random();
 		return Math.rint(random.nextDouble() * 10000000 + 5000)/10;
+	}
+	
+	public int obtenerValorReciboInt(){
+		Random random = new Random();
+		return random.nextInt() * 10000000 + 5000;
 	}
 	
 	

@@ -5,6 +5,7 @@ import logica.BancoId;
 import logica.CamaraComercio;
 import logica.Cliente;
 import logica.ImpuestoPredial;
+import logica.Soat;
 
 import org.ksoap2.SoapEnvelope;
 import org.ksoap2.serialization.PropertyInfo;
@@ -62,6 +63,48 @@ public class PredialDao {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return false;
+		} 
+	}
+	
+	public ImpuestoPredial obtenPredial(int numeroPredio){
+
+		ImpuestoPredial predial = null;
+
+		SoapObject obtenPredial = new SoapObject(NAMESPACE,OBTENER);
+
+		obtenPredial.addProperty("id", numeroPredio);
+
+		SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(
+				SoapEnvelope.VER11);
+
+		envelope.setOutputSoapObject(obtenPredial);
+
+		envelope.implicitTypes = true;
+
+		HttpTransportSE http = new HttpTransportSE(URL);
+
+		try {
+			http.call("urn:"+ OBTENER, envelope);
+			SoapObject respuesta = (SoapObject) envelope.getResponse();
+
+			predial = new ImpuestoPredial();
+			
+			predial.setNPredio(Integer.parseInt(respuesta.getProperty
+					("NPredio").toString()));
+			
+			predial.setFechaPagoPredial(respuesta.getProperty
+					("fechaPagoPredial").toString());
+			
+			predial.setValorPredio(Double.parseDouble(respuesta.
+					getProperty("valorPredio").toString()));
+			predial.setImpuestoPredio(Double.parseDouble
+					(respuesta.getProperty("impuestoPredio").toString()));
+			
+			return predial;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return predial;
 		} 
 	}
 }

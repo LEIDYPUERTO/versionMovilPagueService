@@ -50,8 +50,11 @@ public class MainActivity extends Activity {
 						(txtCedula.getText().toString()));
 
 				if(cliente.getContrasena().equals(txtPassword.getText().toString())){
-					Toast.makeText(MainActivity.this, "Bienvenido "+ cliente.getNombre(), 
+					Toast.makeText(MainActivity.this, "Bienvenido "+ 
+							cliente.getNombre(), 
 							Toast.LENGTH_SHORT).show();
+					
+					intent.putExtra("cedula", cliente.getCedula());
 					
 					startActivity(intent);
 				}

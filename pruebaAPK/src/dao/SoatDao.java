@@ -2,6 +2,8 @@ package dao;
 
 import logica.Cliente;
 import logica.Soat;
+import logica.Telefonia;
+import logica.TelefoniaId;
 
 import org.ksoap2.SoapEnvelope;
 import org.ksoap2.serialization.PropertyInfo;
@@ -61,4 +63,41 @@ public class SoatDao {
 		} 
 	}
 
+	public Soat obtenSoat(String placa){
+
+		Soat soat = null;
+
+		SoapObject obtenSoat = new SoapObject(NAMESPACE,OBTENER);
+
+		obtenSoat.addProperty("id", placa);
+
+		SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(
+				SoapEnvelope.VER11);
+
+		envelope.setOutputSoapObject(obtenSoat);
+
+		envelope.implicitTypes = true;
+
+		HttpTransportSE http = new HttpTransportSE(URL);
+
+		try {
+			http.call("urn:"+ OBTENER, envelope);
+			SoapObject respuesta = (SoapObject) envelope.getResponse();
+
+			soat = new Soat();
+			
+			soat.setNPlaca(respuesta.getProperty("NPlaca").toString());
+			soat.setFechaPagoSoat(respuesta.getProperty("fechaPagoSoat").toString());
+			soat.setPagoSoat(Double.parseDouble(respuesta.getProperty("pagoSoat").
+						toString()));
+			soat.setValorVehiculo(Double.parseDouble
+					(respuesta.getProperty("valorVehiculo").toString()));
+			
+			return soat;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return soat;
+		} 
+	}
 }

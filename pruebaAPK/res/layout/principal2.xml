@@ -101,7 +101,7 @@
         android:layout_above="@+id/btnInternet"
         android:layout_alignRight="@+id/btnGas"
         android:layout_marginBottom="33dp"
-        android:text="Page sus servicios a un click de distancia con nuestro aplicativo movil, de forma rapida y segura"
+        android:text="Pague sus servicios a un click de distancia con nuestro aplicativo movil, de forma rapida y segura"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ImageButton
